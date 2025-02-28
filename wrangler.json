@@ -1,0 +1,30 @@
+{
+  "name": "cf-saas-admin",
+  "main": "./dist/index.js",
+  "assets": {
+    "directory": "./dist"
+  },
+  "compatibility_date": "2024-11-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
+  "upload_source_maps": true,
+  "vars": {
+    "EXAMPLE_VALUE": "example_value"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "CF-SaaS-Admin-Template",
+      "database_id": "0ee937b8-2554-4d0a-b612-5627d061febc"
+    }
+  ],
+  "workflows": [
+    {
+      "name": "cf-saas-admin-customer-workflow",
+      "binding": "CUSTOMER_WORKFLOW",
+      "class_name": "CustomerWorkflow"
+    }
+  ]
+}
